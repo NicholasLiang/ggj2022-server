@@ -49,7 +49,7 @@ wss.on('connection', function connection(ws) {
             case 'Create Room':
                 // console.log('creating room ' + msg[1] + " id: " + msg[2]);
 
-                newRoom = { id: room_n, name: msg[1], red: parseInt(msg[2]), blue: -1, full: false, data: {}};
+                var newRoom = { id: room_n, name: msg[1], red: parseInt(msg[2]), blue: -1, full: false, data: {}};
                 rooms.push(newRoom);
                 room_n += 1;
 
