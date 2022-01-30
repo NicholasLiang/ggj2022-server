@@ -5,11 +5,13 @@
   "main": "index.js",
   "author": "Nicholas Liang",
   "dependencies": {
-    "express": "^4.4.5",
-    "ws": "0.4.x"
+    "bufferutil": "^4.0.1",
+    "express": "^4.17.1",
+    "utf-8-validate": "^5.0.2",
+    "ws": "^7.2.0"
   },
   "engines": {
-    "node": ">= 14.0.0"
+    "node": "12.x"
   },
   "scripts": {
     "start": "node index.js"
