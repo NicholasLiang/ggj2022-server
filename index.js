@@ -1,18 +1,10 @@
-var WebSocketServer = require("ws").Server
-var http = require("http")
-var express = require("express")
-var app = express()
-var port = process.env.PORT || 5000
+const WebSocketServer = require('ws').WebSocketServer;
 
-app.use(express.static(__dirname + "/"))
+const wss = new WebSocketServer({ port: 9898 });
 
-var server = http.createServer(app)
-server.listen(port)
-
-console.log("http server listening on %d", port)
-
-var wss = new WebSocketServer({ server: server })
-console.log("websocket server created")
+var client_n = 0;
+var rooms = [];
+var room_n = 0;
 
 var enc = new TextEncoder(); // always utf-8
 
